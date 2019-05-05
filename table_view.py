@@ -1,5 +1,8 @@
 from tabliser import Table
 
+# TODO: need to add pagination
+# TODO: add bootstrap div tags
+
 class TableView(object):
     table = Table()
 
