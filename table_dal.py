@@ -11,6 +11,7 @@ class Table_DAL(object):
     def load(self, filename, table_name, table:Table):
         """ loads the table from the filename into the table and returns it"""
 
+        table.rows = []
         conn = sqlite3.connect(filename)
         cur = conn.cursor()
         cur.execute(f'SELECT * FROM {table_name}')
