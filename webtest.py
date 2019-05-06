@@ -16,7 +16,8 @@ table_view = Table_View(table)
 @APP.route("/")
 def index():
     """ render the main index template """
-    return render_template("index.html", table=table_view)
+    # print(f"The contents of tableview are: '{table_view}'")
+    return render_template("index.html", table=table_view, title=table_view.table.name)
 
 def shutdown_server():
     """ shutsdown the SMARSLab web server """

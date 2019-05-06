@@ -24,9 +24,9 @@ class Table_View(object):
         print("</table>")
 
     def render_to_string(self):
-        # table_string = ""
+        # table_string = 0987657""
 
-        table_string = f'<table>'
+        table_string = f'<table class="table">'
         for row_header in self.table.row_headers:
             table_string = table_string + f"<th>{row_header}</ht>"
         for rows in self.table.rows:
@@ -35,7 +35,7 @@ class Table_View(object):
                 table_string = table_string + f"<td>{row}</td>"
             table_string = table_string + f"</tr>"
         table_string = table_string + f'</table>'
-        print(table_string)
+        # print(table_string)
         return table_string
 
     def __repr__(self):
