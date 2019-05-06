@@ -1,0 +1,21 @@
+<html>
+<head>
+  {%- block styles %}
+
+      <!-- <script src="{{ url_for('static', filename='js/handlebars-v4.1.2.js')}}"></script> -->
+
+      {% endblock styles -%}
+
+</head>
+<body>
+  <div class="main">
+    <h1>Welcome to the tabliser web test</h1>
+    <div class="tabliser">
+      <div>
+        <h1>{{title}}</h1>
+        {{ table }}
+      </div>
+  </div>
+  </div>
+</body>
+</html>

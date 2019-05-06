@@ -3,7 +3,7 @@ from tabliser import Table
 # TODO: need to add pagination
 # TODO: add bootstrap div tags
 
-class TableView(object):
+class Table_View(object):
     table = Table()
 
     def __init__(self, table:Table):
@@ -23,6 +23,27 @@ class TableView(object):
             print("</tr>")
         print("</table>")
 
+    def render_to_string(self):
+        # table_string = ""
+
+        table_string = f'<table>'
+        for row_header in self.table.row_headers:
+            table_string = table_string + f"<th>{row_header}</ht>"
+        for rows in self.table.rows:
+            table_string = table_string + f"<tr>"
+            for row in rows:
+                table_string = table_string + f"<td>{row}</td>"
+            table_string = table_string + f"</tr>"
+        table_string = table_string + f'</table>'
+        print(table_string)
+        return table_string
+
+    def __repr__(self):
+        return self.render_to_string()
+
+
+    def __str__(self):
+        return self.render_to_string()
 
     def render_text(self):
         """ Render the table in commandline text """
