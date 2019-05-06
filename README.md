@@ -9,3 +9,8 @@
 - draw table headers
 - loop through each row until page limit is hit
 - draw pagination (rows / rows_per_page)
+
+## Features
+- Renders Tables to a webpage
+- Can paginate a table for a number of rows
+- Can draw the page index

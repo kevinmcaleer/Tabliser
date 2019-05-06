@@ -19,7 +19,8 @@ def index():
     # print(f"The contents of tableview are: '{table_view}'"
     table_dal.load('test.db','animals',table)
     table_view = Table_View(table)
-    return render_template("index.html", table=table_view, title=table_view.table.name)
+    table_view.set_current_page(2)
+    return render_template("index.html", table=table_view, title=table_view.table.name, page_index=table_view.page_index)
 
 def shutdown_server():
     """ shutsdown the SMARSLab web server """
